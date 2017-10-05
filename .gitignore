@@ -1,5 +1,6 @@
 _*
 .env
 pubnub.log
+.bundle/
 bundle/
 runtime/
