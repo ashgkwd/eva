@@ -15,7 +15,7 @@ docker exec -i -t $1 /bin/bash -c 'export TERM=xterm; /bin/bash'
 }
 ```
 
-- Comment out two lines from docker-compose.yml
+- Comment out two lines from docker-compose.yml for bundle installation
 ```yml
 		...
         image: litaio/lita
@@ -24,6 +24,13 @@ docker exec -i -t $1 /bin/bash -c 'export TERM=xterm; /bin/bash'
         ports:
         ...
 ```
+
+- Now let's install gems. Everytime when Gemfile is changed, we need to run boxes without command of docker-compose.yml
+```shell
+docker-compose up eva # running in non daemon to see progress
+```
+
+- Once installation is done. Uncomment those two lines in docker-compose.yml
 
 # Run
 
