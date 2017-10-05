@@ -15,7 +15,17 @@ docker exec -i -t $1 /bin/bash -c 'export TERM=xterm; /bin/bash'
 }
 ```
 
-# To run
+- Comment out two lines from docker-compose.yml
+```yml
+		...
+        image: litaio/lita
+        #command:
+        #    tail -f /dev/null
+        ports:
+        ...
+```
+
+# Run
 
 - Start boxes `docker-compose up -d eva`
 - Get inside box for command line `d li`
