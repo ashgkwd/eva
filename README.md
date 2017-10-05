@@ -17,7 +17,7 @@ docker exec -i -t $1 /bin/bash -c 'export TERM=xterm; /bin/bash'
 
 - Comment out two lines from docker-compose.yml for bundle installation
 ```yml
-		...
+        ...
         image: litaio/lita
         #command:
         #    tail -f /dev/null
