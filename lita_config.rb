@@ -6,4 +6,6 @@ Lita.configure do |config|
 	config.robot.alias = "/eva"
 	config.redis = {url: "redis://redis:6379"}
 	config.http.port = ENV['PORT'] || 8080
+	config.robot.adapter = :slack
+	config.adapters.slack.token = ENV['SLACK_TOKEN']
 end
