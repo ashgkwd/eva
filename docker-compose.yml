@@ -2,6 +2,8 @@ version: '2'
 services:
     eva:
         image: litaio/lita
+        environment:
+            - SLACK_TOKEN=$SLACK_TOKEN
         command:
             tail -f /dev/null
         ports:
